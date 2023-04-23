@@ -756,4 +756,64 @@ body {
 .gallery-list-item:focus .gallery-label {
   transform: translateY(0);
 }
+
+/* FORMULARZ W OKNIE MODALNYM */
+.form-order-service {
+  padding: 40px;
+}
+
+/* nagłówek */
+.form-order-service h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.label-order{
+  padding-bottom: 10px;
+  /* odstep miedzy polami w formularzu */
+  position: relative;
+  /*  dla ikony*/
+}
+
+.label-order span {
+  display: block;
+  /* aby span byl nad inputem */
+  font-size: 12px;
+  color: var(--font-color-paragraph);
+  padding-bottom: 4px;
+}
+
+.label-order input {
+  width: 100%;
+  /* calkowita szerokosc inputu */
+  padding-left: 42px;
+  /* rozpoczęcie wpisywania miejsce dla ikony */
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.label-order svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 14px;
+  margin-left: 15px;
+  /* lewy dolny rog */
+}
+
+/* +svg musial zostac dodany, aby zadzialala zmiana koloru dla ikony */
+.label-order input:hover,
+.label-order input:focus,
+.label-order input:hover +svg,
+.label-order input:focus +svg{
+  border-color: var(--active-color);
+  fill: var(--active-color);
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* KONIEC PORTFOLIO */

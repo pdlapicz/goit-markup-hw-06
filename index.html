@@ -394,7 +394,7 @@
             class="form-subscribe-newsletter"
             autocomplete="off"
           >
-            <label for="newsletter_email">
+            <label for="newsletter-email">
               <input
                 type="email"
                 name="email-subscribe-newsletter"
@@ -414,9 +414,64 @@
         </div>
       </div>
     </footer>
-    <div data-modal class="is-hidden backdrop">
+    <!-- doklasy dodac is-hidden -->
+    <div data-modal class="backdrop">
       <!-- bez osobnego diva backdrop zadziala tylko na okno modalne -->
+
       <div class="modal">
+        <!-- <svg width="11" height="11">
+          <use href="./images/icons.svg#icon-person"></use>
+        </svg>
+        <svg width="11" height="11">
+          <use href="./images/icons.svg#icon-phone"></use>
+        </svg>
+        <svg width="11" height="11">
+          <use href="./images/icons.svg#icon-email"></use>
+        </svg>
+        <svg width="11" height="11">
+          <use href="./images/icons.svg#icon-check"></use>
+        </svg> -->
+        <!-- value - aby przy kazdym odswiezeniu/przekierowaniu wartosc byla pusta -->
+        <form name="order-service-form" class="form-order-service" autocomplete="off">
+          <h2>Zostaw swoje dane w formularzu poniżej</h2>
+          <label for="order-name" class="label-order">
+            <span>Imie</span>
+            <input type="text" name="client-name" value="" id="order-name" />
+            <svg width="12" height="12">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </label>
+           <label for="order-tel" class="label-order">
+            <span>Telefon</span>
+            <input type="tel" name="client-tel" value="" id="order-tel" />
+            <svg width="13" height="13">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </label>
+           <!--  
+          <label for="newsletter_email">
+            <input
+              type="email"
+              name="email-subscribe-newsletter"
+              value=""
+              placeholder="E-mail"
+              id="newsletter-email"
+            />
+          
+          </label>
+          <label for="newsletter_email">
+            <textarea
+              type="email"
+              name="email-subscribe-newsletter"
+              value=""
+              placeholder="E-mail"
+              id="newsletter-email"
+            />
+           
+          </label> -->
+               
+        </form>
+        <!-- przycisk zamykający -->
         <button data-modal-close class="btn-close">
           <svg width="11" height="11">
             <use href="./images/icons.svg#icon-close"></use>
