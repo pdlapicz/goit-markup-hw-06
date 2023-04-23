@@ -386,7 +386,21 @@
           </div>
         </div>
         <!-- czesc jeszcze nie uzywana -->
-        <div class="footer-empty"></div>
+        <div class="footer-subscribe-newsletter">
+          <h3>zapisz się do newslettera</h3>
+          <form name="subsctribe-newsletter-form" class="form-subscribe-newsletter">
+            <label>
+              <input type="email" name="email-subscribe-newsletter" value="" placeholder="E-mail" />
+              <!-- value - aby przy kazdym odswiezeniu/przekierowaniu wartosc byla pusta -->
+            </label>
+            <button type="submit" class="btn-subscribe-newsletter">
+              Zapisz się
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div data-modal class="is-hidden backdrop">
