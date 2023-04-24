@@ -848,7 +848,6 @@ body {
 
 .label-check {
   position: relative;
-  margin: 0 14px;
   font-size: 14px;
 }
 
@@ -856,6 +855,56 @@ body {
   /* zmiana koloru dla linków */
   color: var(--active-color);
 }
+
+.label-check input {
+  /* ukrycie typowego checkboxa */
+  position: absolute;
+  opacity: 0;
+  cursor: none;
+  height: 0;
+  width: 0;
+}
+
+.label-check span {
+  padding: 0 14px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+}
+.label-check svg {
+  fill: var(--active-color);
+  border: 1px solid var(--font-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  /* ulozenie checkboxa */
+  transform: translateY(0.15em);
+}
+
+
+
+
+
+.label-check input:checked + .label-check svg{
+background-color: #2196f3;
+}
+
+
+
+/* .label-check svg::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+.label-check svg:checked::before {
+  transform: scale(1);
+} */
+/* 
+.label-check input:checked ~ svg {
+background-color: #2196f3;
+} */
 
 .btn-order-send {
   display: block;
