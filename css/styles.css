@@ -771,30 +771,60 @@ body {
   padding-bottom: 12px;
 }
 
-.label-order{
-  padding-bottom: 10px;
-  /* odstep miedzy polami w formularzu */
+.label-order {
   position: relative;
-  /*  dla ikony*/
+  /* position relative, aby ikony znajdowaly sie w danym labelu */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* ulozenie elementów tj span nad inputem */
 }
 
 .label-order span {
-  display: block;
   /* aby span byl nad inputem */
   font-size: 12px;
   color: var(--font-color-paragraph);
-  padding-bottom: 4px;
+
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 
 .label-order input {
-  width: 100%;
-  /* calkowita szerokosc inputu */
   padding-left: 42px;
   /* rozpoczęcie wpisywania miejsce dla ikony */
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  font-size: 12px;
 }
+
+.label-order textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  /* 12 wysokosc 16 szerokosc */
+  padding: 12px 16px;
+  height: 7.5rem;
+  outline: none;
+  resize: none;
+  /* odstep dla oswiadczenia */
+  margin-bottom: 10px;
+}
+
+.label-order textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.label-order textarea:hover,
+.label-order textarea:focus {
+  border-color: var(--active-color);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .label-order svg {
   position: absolute;
   left: 0;
@@ -807,8 +837,8 @@ body {
 /* +svg musial zostac dodany, aby zadzialala zmiana koloru dla ikony */
 .label-order input:hover,
 .label-order input:focus,
-.label-order input:hover +svg,
-.label-order input:focus +svg{
+.label-order input:hover + svg,
+.label-order input:focus + svg {
   border-color: var(--active-color);
   fill: var(--active-color);
   transition-property: border-color, fill;
@@ -816,4 +846,33 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.label-check {
+  position: relative;
+  margin: 0 14px;
+  font-size: 14px;
+}
+
+.label-check a {
+  /* zmiana koloru dla linków */
+  color: var(--active-color);
+}
+
+.btn-order-send {
+  display: block;
+  margin: 30px auto 0 auto;
+  /* wyśrodkowanie przycisku */
+  padding: 10px 76px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  /* button domyslnie ma czcionke domyslna dla przegladarki, wymaga zawsze nadania mimo ze jest w body */
+  cursor: pointer;
+  background: var(--active-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--active-color);
+}
 /* KONIEC PORTFOLIO */

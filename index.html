@@ -401,6 +401,7 @@
                 value=""
                 placeholder="E-mail"
                 id="newsletter-email"
+                required
               />
               <!-- value - aby przy kazdym odswiezeniu/przekierowaniu wartosc byla pusta -->
             </label>
@@ -419,57 +420,55 @@
       <!-- bez osobnego diva backdrop zadziala tylko na okno modalne -->
 
       <div class="modal">
-        <!-- <svg width="11" height="11">
-          <use href="./images/icons.svg#icon-person"></use>
-        </svg>
-        <svg width="11" height="11">
-          <use href="./images/icons.svg#icon-phone"></use>
-        </svg>
-        <svg width="11" height="11">
-          <use href="./images/icons.svg#icon-email"></use>
-        </svg>
+        <!-- 
         <svg width="11" height="11">
           <use href="./images/icons.svg#icon-check"></use>
         </svg> -->
         <!-- value - aby przy kazdym odswiezeniu/przekierowaniu wartosc byla pusta -->
         <form name="order-service-form" class="form-order-service" autocomplete="off">
           <h2>Zostaw swoje dane w formularzu poniżej</h2>
+
           <label for="order-name" class="label-order">
             <span>Imie</span>
-            <input type="text" name="client-name" value="" id="order-name" />
+            <input type="text" name="client-name" value="" id="order-name" minlength="3" required />
             <svg width="12" height="12">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
-           <label for="order-tel" class="label-order">
+
+          <label for="order-tel" class="label-order">
             <span>Telefon</span>
-            <input type="tel" name="client-tel" value="" id="order-tel" />
+            <input type="tel" name="client-tel" value="" id="order-tel" required />
             <svg width="13" height="13">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </label>
-           <!--  
-          <label for="newsletter_email">
-            <input
-              type="email"
-              name="email-subscribe-newsletter"
-              value=""
-              placeholder="E-mail"
-              id="newsletter-email"
-            />
-          
+
+          <label for="order-email" class="label-order">
+            <span>Email</span>
+            <input type="email" name="client-email" value="" id="order-email" required />
+            <svg width="11" height="11">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
           </label>
-          <label for="newsletter_email">
+          <label for="order-comment" class="label-order">
+            <span>Komentarz</span>
             <textarea
-              type="email"
-              name="email-subscribe-newsletter"
+              type="text"
+              name="client-comment"
               value=""
-              placeholder="E-mail"
-              id="newsletter-email"
-            />
-           
-          </label> -->
-               
+              placeholder="Wprowadź tekst"
+              id="order-comment"
+            ></textarea>
+          </label>
+          <label class="label-check">
+            <input type="checkbox" name="client-terms-accept" required />
+            <span
+              >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+              <a href="#">Politykę Prywatności</a>.</span
+            >
+          </label>
+          <button type="submit" class="btn-order-send">Wyślij</button>
         </form>
         <!-- przycisk zamykający -->
         <button data-modal-close class="btn-close">
