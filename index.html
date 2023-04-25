@@ -415,10 +415,8 @@
         </div>
       </div>
     </footer>
-    <!-- doklasy dodac is-hidden -->
-    <div data-modal class="backdrop">
+    <div data-modal class="backdrop is-hidden">
       <!-- bez osobnego diva backdrop zadziala tylko na okno modalne -->
-
       <div class="modal">
         <!-- value - aby przy kazdym odswiezeniu/przekierowaniu wartosc byla pusta -->
         <form name="order-service-form" class="form-order-service" autocomplete="off">
@@ -447,7 +445,7 @@
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </label>
-
+          <!-- textarea na komentarz -->
           <label for="order-comment" class="label-order">
             <span>Komentarz</span>
             <textarea
@@ -458,14 +456,19 @@
               id="order-comment"
             ></textarea>
           </label>
+          <!-- checkbox z zaakceptowaniem regulaminu -->
           <label class="label-check">
-            <input type="checkbox" name="client-terms-accept"/>
-
-            <span>
-              <svg width="16" height="15">
-                <use href="./images/icons.svg#icon-check"></use></svg
+            <input class="hidden-checkbox" type="checkbox" name="client-terms-accept" />
+            <div class="custom-checkbox">
+              <svg width="14" height="12">
+                <!-- delikatne zmniejszenie, aby ikona zmiescila sie w ramce -->
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </div>
+            <span
               >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
-              <a href="#">Politykę Prywatności</a>.</span>
+              <a href="#">Politykę Prywatności</a>.</span
+            >
           </label>
           <button type="submit" class="btn-order-send">Wyślij</button>
         </form>

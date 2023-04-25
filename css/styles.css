@@ -847,8 +847,17 @@ body {
 }
 
 .label-check {
-  position: relative;
+  margin-top: 20px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+}
+
+.label-check span {
+  letter-spacing: 0.03em;
+  line-height: 24px;
 }
 
 .label-check a {
@@ -865,46 +874,24 @@ body {
   width: 0;
 }
 
-.label-check span {
-  padding: 0 14px;
-  letter-spacing: 0.03em;
-  line-height: 24px;
-}
-.label-check svg {
-  fill: var(--active-color);
+.label-check div {
+  width: 16px;
+  height: 15px;
   border: 1px solid var(--font-color);
-  border-radius: 2px;
-  margin-right: 8px;
-  /* ulozenie checkboxa */
-  transform: translateY(0.15em);
+  border-radius: 3px;
 }
 
-
-
-
-
-.label-check input:checked + .label-check svg{
-background-color: #2196f3;
+.hidden-checkbox ~ .custom-checkbox > svg {
+  opacity: 1;
 }
 
-
-
-/* .label-check svg::before {
-  content: '';
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
+.hidden-checkbox:checked ~ .custom-checkbox {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+  transition-property: border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.label-check svg:checked::before {
-  transform: scale(1);
-} */
-/* 
-.label-check input:checked ~ svg {
-background-color: #2196f3;
-} */
 
 .btn-order-send {
   display: block;
