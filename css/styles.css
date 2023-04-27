@@ -784,7 +784,6 @@ body {
   /* aby span byl nad inputem */
   font-size: 12px;
   color: var(--font-color-paragraph);
-
   margin-top: 12px;
   margin-bottom: 4px;
 }
@@ -829,9 +828,10 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  margin-bottom: 14px;
-  margin-left: 15px;
   /* lewy dolny rog */
+  margin-bottom: 11px;
+  /* wymiar svg 18, 40/2 - 18/2 */
+  margin-left: 15px;
 }
 
 /* +svg musial zostac dodany, aby zadzialala zmiana koloru dla ikony */
@@ -852,8 +852,8 @@ body {
   /* wyswietlanie w jednej linii diva i spana, wysrodkowanie */
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 0 15px;
 }
 
 .label-check span {
