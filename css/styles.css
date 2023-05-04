@@ -887,6 +887,12 @@ body {
   opacity: 1;
 }
 
+.hidden-checkbox ~ .custom-checkbox {
+  transition-property: border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .hidden-checkbox:checked ~ .custom-checkbox {
   background-color: var(--active-color);
   border-color: var(--active-color);
